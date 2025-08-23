@@ -32,7 +32,7 @@ jobs:
         run: nuget restore Caravana/Caravana.sln
 
       - name: Publish to folder
-        run: msbuild Caravana/Caravana.sln /nologo /verbosity:m /t:Build /p:_PackageTempDir="\published\"
+        run: msbuild Caravana/Caravana.sln /t:Publish /p:Configuration=Release;PublishDir="PublishOutput"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -69,6 +69,7 @@ jobs:
           package: .
 
           
+
 
 
 
