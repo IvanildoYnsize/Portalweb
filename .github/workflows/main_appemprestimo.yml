@@ -73,9 +73,10 @@ jobs:
         with:
           app-name: 'appemprestimo'
           slot-name: 'Production'
-          package: 'Caravana/PublishOutput'
+          package: .
 
           
+
 
 
 
